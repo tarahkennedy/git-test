@@ -4,31 +4,39 @@
 	<meta charset="UTF-8">
 	<title>Find Dog Parks</title>
 	<link rel="stylesheet" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- font awesome -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <!-- google fonts -->
-	<link href='http://fonts.googleapis.com/css?family=Raleway:400,700|Poiret+One|Playfair+Display:400,700' rel='stylesheet' type='text/css'>
-	<link href='https://api.mapbox.com/mapbox.js/v2.2.1/mapbox.css' rel='stylesheet' />
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Fredericka+the+Great|Londrina+Shadow' rel='stylesheet' type='text/css'>
+
 </head>
 <body>
 <header>
 	<h1>YYZ UNLEASHED</h1>
+
+
+<div class="description">
+	<div class="wrapper flex">
+		<p>Find a place for you and your pup to frolic together! </p> 
+	</div>
+</div>
+
 	<h3><i class="fa fa-paw"></i></h3>
 </header>
 
 
 
-<div class="description">
-	<div class="wrapper flex">
-		<p>Looking for a place for you and your pup to frolic together? </p> 
-	</div>
-</div>
 
 
 	<div class="wrapper flex">
-		<form action="" class="distanceForm">
-			<input class="distance" type="range" name="zoomLevel" min="1" max="5000" step="10">
-			<input type="submit" class="submit" value="Submit">
+		<form action="" class="distanceForm" oninput="km.value=distance.value">
+		<!-- <form action="" class="distanceForm"> -->
+		<p class="distance">how far will your furry friend go?</p>
+			<input class="distanceInput" type="range" name="distance" min="0.5" max="5" step="0.5">
+			<p class="range-output"><output for="distance" name="km">2.5</output>km</p>
+			<input type="submit" class="submit" value="find your park">
 		</form>
 	</div>
 
@@ -43,6 +51,7 @@
 <!-- JAVASCRIPT STARTS HERE -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src='https://api.mapbox.com/mapbox.js/v2.2.1/mapbox.js'></script>
+<link href='https://api.mapbox.com/mapbox.js/v2.2.1/mapbox.css' rel='stylesheet' />
 <script src="style.js"></script>
 	
 </body>
